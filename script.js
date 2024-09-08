@@ -31,10 +31,10 @@ function updateResumeContent(data) {
         if (element)
             element.innerHTML = html;
     };
-    updateInnerHTML("resumeFacebook", "<span class=\"pic a\"></span> <a href=\"".concat(data.facebook, "\">Facebook</a>"));
-    updateInnerHTML("resumeTwitter", "<span class=\"pic b\"></span> <a href=\"".concat(data.twitter, "\">Twitter</a>"));
-    updateInnerHTML("resumeLinkedIn", "<span class=\"pic d\"></span> <a href=\"".concat(data.linkedin, "\">LinkedIn</a>"));
-    updateInnerHTML("resumeYouTube", "<span class=\"pic c\"></span> <a href=\"".concat(data.youtube, "\">YouTube</a>"));
+    updateInnerHTML("resumeFacebook", "<span class=\"pic a\"></span> <a href=\"".concat(data.facebook, "\" target=\"_blank\">Facebook</a>"));
+    updateInnerHTML("resumeTwitter", "<span class=\"pic b\"></span> <a href=\"".concat(data.twitter, "\" target=\"_blank\">Twitter</a>"));
+    updateInnerHTML("resumeLinkedIn", "<span class=\"pic d\"></span> <a href=\"".concat(data.linkedin, "\" target=\"_blank\">LinkedIn</a>"));
+    updateInnerHTML("resumeYouTube", "<span class=\"pic c\"></span> <a href=\"".concat(data.youtube, "\" target=\"_blank\">YouTube</a>"));
     updateInnerHTML("resumeAboutMe", data.about);
     updateInnerHTML("resumeEducation", data.education);
     updateInnerHTML("resumeWorkExperience", data.work);
@@ -149,3 +149,4 @@ document.addEventListener("DOMContentLoaded", function () {
 (_c = document.querySelector(".print")) === null || _c === void 0 ? void 0 : _c.addEventListener("click", function () {
     alert("Sadly can't be able to complete the last half step due to the lack of time as i was in coaching and had a PIAIC 4 hours class : (");
 });
+document.querySelectorAll('a').forEach(function (link) { return link.setAttribute('target', '_blank'); });

@@ -58,19 +58,19 @@ function updateResumeContent(data: ResumeData): void {
 
   updateInnerHTML(
     "resumeFacebook",
-    `<span class="pic a"></span> <a href="${data.facebook}">Facebook</a>`
+    `<span class="pic a"></span> <a href="${data.facebook}" target="_blank">Facebook</a>`
   );
   updateInnerHTML(
     "resumeTwitter",
-    `<span class="pic b"></span> <a href="${data.twitter}">Twitter</a>`
+    `<span class="pic b"></span> <a href="${data.twitter}" target="_blank">Twitter</a>`
   );
   updateInnerHTML(
     "resumeLinkedIn",
-    `<span class="pic d"></span> <a href="${data.linkedin}">LinkedIn</a>`
+    `<span class="pic d"></span> <a href="${data.linkedin}" target="_blank">LinkedIn</a>`
   );
   updateInnerHTML(
     "resumeYouTube",
-    `<span class="pic c"></span> <a href="${data.youtube}">YouTube</a>`
+    `<span class="pic c"></span> <a href="${data.youtube}" target="_blank">YouTube</a>`
   );
 
   updateInnerHTML("resumeAboutMe", data.about);
@@ -222,3 +222,4 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelector(".print")?.addEventListener("click",() => {
     alert("Sadly can't be able to complete the last half step due to the lack of time as i was in coaching and had a PIAIC 4 hours class : (")
   })
+document.querySelectorAll('a').forEach(link => (link as HTMLAnchorElement).setAttribute('target','_blank'));
