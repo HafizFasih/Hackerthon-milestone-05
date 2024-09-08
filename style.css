@@ -274,6 +274,8 @@ body {
     border-top-right-radius: 0px;
   }
   .form{
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
     width: 90vw;
   }
   .form-container{
