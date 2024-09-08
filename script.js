@@ -147,5 +147,5 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 (_c = document.querySelector(".print")) === null || _c === void 0 ? void 0 : _c.addEventListener("click", function () {
-    alert("Sadly can't be able to complete due to the lack of time as i was in coaching and had a PIAIC 4 hours class : (");
+    alert("Sadly can't be able to complete the last half step due to the lack of time as i was in coaching and had a PIAIC 4 hours class : (");
 });
