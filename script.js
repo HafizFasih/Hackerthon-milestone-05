@@ -1,4 +1,4 @@
-var _a, _b, _c;
+var _a, _b;
 (_a = document.getElementById("resumeBtn")) === null || _a === void 0 ? void 0 : _a.addEventListener("click", function () {
     var resumeSection = document.querySelector(".resume");
     var formSection = document.querySelector(".form");
@@ -48,7 +48,6 @@ function updateResumeContent(data) {
     setStyleWidth("resumeJavascript", data.javascript);
     setStyleWidth("resumeReact", data.react);
     setStyleWidth("resumeNextjs", data.nextjs);
-    document.getElementById("customBtn").innerText = "EDIT";
     var customBtn = document.getElementById("customBtn");
     if (customBtn)
         customBtn.innerText = "EDIT";
@@ -146,7 +145,22 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error("Form not found");
     }
 });
-(_c = document.querySelector(".print")) === null || _c === void 0 ? void 0 : _c.addEventListener("click", function () {
-    alert("Sadly can't be able to complete the last half step due to the lack of time as i was in coaching and had a PIAIC 4 hours class : (");
-});
 document.querySelectorAll('a').forEach(function (link) { return link.setAttribute('target', '_blank'); });
+function generateRandomLink() {
+    return "https://example.com/".concat(Math.random().toString(36).substring(2, 12));
+}
+function handlePrintButtonClick() {
+    var randomLink = generateRandomLink();
+    var linkElement = document.getElementById('randomLink');
+    var linkContainer = document.getElementById('linkContainer');
+    linkElement.textContent = randomLink;
+    linkElement.href = "#";
+    if (linkContainer) {
+        linkContainer.classList.remove('hidden');
+    }
+    console.log('Project saved at:', randomLink);
+}
+var printButton = document.getElementById('printButton');
+if (printButton) {
+    printButton.addEventListener('click', handlePrintButtonClick);
+}

@@ -88,8 +88,6 @@ function updateResumeContent(data: ResumeData): void {
   setStyleWidth("resumeReact", data.react);
   setStyleWidth("resumeNextjs", data.nextjs);
 
-  document.getElementById("customBtn")!.innerText = "EDIT";
-
   const customBtn = document.getElementById("customBtn") as HTMLElement;
   if (customBtn) customBtn.innerText = "EDIT";
 
@@ -219,7 +217,25 @@ document.addEventListener("DOMContentLoaded", () => {
     console.error("Form not found");
   }
 });
-  document.querySelector(".print")?.addEventListener("click",() => {
-    alert("Sadly can't be able to complete the last half step due to the lack of time as i was in coaching and had a PIAIC 4 hours class : (")
-  })
+
 document.querySelectorAll('a').forEach(link => (link as HTMLAnchorElement).setAttribute('target','_blank'));
+
+function generateRandomLink(): string {
+  return `https://example.com/${Math.random().toString(36).substring(2, 12)}`;
+}
+
+function handlePrintButtonClick() {
+  const randomLink = generateRandomLink();
+  const linkElement = document.getElementById('randomLink') as HTMLAnchorElement;
+  const linkContainer = document.getElementById('linkContainer');
+
+  linkElement.textContent = randomLink;
+  linkElement.href = "#";
+  if (linkContainer) {
+    linkContainer.classList.remove('hidden');
+}
+}
+const printButton = document.getElementById('printButton');
+if (printButton) {
+  printButton.addEventListener('click', handlePrintButtonClick);
+}

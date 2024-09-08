@@ -26,7 +26,8 @@
               <p id="resumeAddress"><span></span> Johar, Karachi</p>
               <p id="resumeContact"><span></span> +92 3102137073</p>
               <p id="resumeEmail">
-                <span></span> fasihmuhamm<br />ad972@gmail<br /> .com
+                <span></span> fasihmuhamm<br />ad972@gmail<br />
+                .com
               </p>
               <p id="resumeWebsite"><span></span> www.fasih.com</p>
             </div>
@@ -84,16 +85,20 @@
             <div class="social">
               <h3>Social</h3>
               <div class="social-item" id="resumeFacebook">
-                <span class="pic a"></span> <a href="https://www.facebook.com" target="_blank">Facebook</a>
+                <span class="pic a"></span>
+                <a href="https://www.facebook.com" target="_blank">Facebook</a>
               </div>
               <div class="social-item" id="resumeTwitter">
-                <span class="pic b"></span> <a href="https://www.twitter.com" target="_blank">Twitter</a>
+                <span class="pic b"></span>
+                <a href="https://www.twitter.com" target="_blank">Twitter</a>
               </div>
               <div class="social-item" id="resumeLinkedIn">
-                <span class="pic d"></span> <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+                <span class="pic d"></span>
+                <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
               </div>
               <div class="social-item" id="resumeYouTube">
-                <span class="pic c"></span> <a href="https://www.youtube.com" target="_blank">YouTube</a>
+                <span class="pic c"></span>
+                <a href="https://www.youtube.com" target="_blank">YouTube</a>
               </div>
             </div>
           </div>
@@ -159,8 +164,12 @@
                 <div class="icon">📚</div>
               </div>
             </div>
+            <div id="linkContainer" class="hidden">
+              <p>Your project link:</p>
+              <a id="randomLink" href="#" target="_blank">Click here to view</a>
           </div>
-          <button class="print">PRINT</button>
+          </div>
+          <button id="printButton" class="print">PRINT</button>
         </div>
 
         <div class="form">
@@ -220,7 +229,7 @@
                 <label for="work">Work Experience</label>
                 <textarea id="work" name="work" rows="4" required></textarea>
               </div>
-              
+
               <div class="form-group">
                 <label for="html">HTML %</label>
                 <input
@@ -278,7 +287,12 @@
               </div>
               <div class="form-group">
                 <label for="profileImage">Profile Image</label>
-                <input type="file" id="profileImage" name="profileImage" accept="image/*" />
+                <input
+                  type="file"
+                  id="profileImage"
+                  name="profileImage"
+                  accept="image/*"
+                />
               </div>
               <div class="form-group">
                 <button type="submit">Submit</button>
@@ -288,6 +302,6 @@
         </div>
       </div>
     </div>
-    <script src="script.js"></script>
+    <script src="script.js" type="module"></script>
   </body>
 </html>
